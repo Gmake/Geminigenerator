@@ -55,7 +55,7 @@ export default () => {
     const inputValue = inputRef.value
     if (!inputValue)
       return
-    const sendValue= "Behind the"+inputValue;
+    const sendValue= "the mean of "+inputValue;
 
     inputRef.value = ''
     setMessageList([
