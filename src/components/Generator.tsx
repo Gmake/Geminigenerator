@@ -55,13 +55,14 @@ export default () => {
     const inputValue = inputRef.value
     if (!inputValue)
       return
+    const sendValue= "Behind the"+inputValue;
 
     inputRef.value = ''
     setMessageList([
       ...messageList(),
       {
         role: 'user',
-        content: inputValue,
+        content: sendValue,
       },
     ])
     requestWithLatestMessage()
@@ -255,13 +256,13 @@ export default () => {
         )}
       >
         <div class="gen-text-wrapper relative">
-          <button title="Picture" onClick={handlePictureUpload} class="absolute left-1rem top-50% translate-y-[-50%]">
+          {/* <button title="Picture" onClick={handlePictureUpload} class="absolute left-1rem top-50% translate-y-[-50%]">
             <Picture />
-          </button>
+          </button> */}
           <textarea
             ref={inputRef!}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder="Enter your name"
             autocomplete="off"
             autofocus
             onInput={() => {
@@ -272,7 +273,7 @@ export default () => {
             class="gen-textarea"
           />
           <button onClick={handleButtonClick} gen-slate-btn>
-            Send
+            submit
           </button>
           <button title="Clear" onClick={clear} gen-slate-btn>
             <IconClear />

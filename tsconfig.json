@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
+    "module":"ESNext",
     "types": ["vite-plugin-pwa/info"],
     "paths": {
       "@/*": ["src/*"],
